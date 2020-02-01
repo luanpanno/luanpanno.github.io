@@ -6,23 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfólio</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fontawesome-free-5.12.0-web/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <p class="logo-header">Luan Panno</p>
+            <p class="logo-header"><a href="">Luan Panno</a></p>
             <nav class="nav">
                 <ul class="lista-nav">
                     <!-- Mudar o bold conforme a seção -->
-                    <li class="item-nav"><a href="">Início</a></li>
-                    <li class="item-nav"><a href="">Sobre</a></li>
-                    <li class="item-nav"><a href="">Projetos</a></li>
-                    <li class="item-nav"><a href="">Contato</a></li>
+                    <li class="item-nav"><a href="#inicio">Início</a></li>
+                    <li class="item-nav"><a href="#sobre">Sobre</a></li>
+                    <li class="item-nav"><a href="#projetos">Projetos</a></li>
+                    <li class="item-nav"><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </header>
 
-        <div class="first-page">
+        <div class="first-page" id="inicio">
             <div class="first-page-content">
                 <div class="text">
                     <h1>Luan Panno</h1>
@@ -34,7 +35,7 @@
             <div class="hidden"></div>
         </div>
 
-        <div class="about-page">
+        <div class="about-page" id="sobre">
             <div class="about">
                 <div class="about-profile">
                     <h1 class="title-section">Sobre</h1>
@@ -44,19 +45,18 @@
                 <div class="habilidades">
                     <h2>Habilidades</h2>
                     <ul class="lista-habilidades">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Node.js</li>
-                        <li>ReactJS</li>
-                        <li>React Native</li>
+                        <li><span>HTML</span><i class="fab fa-html5 html" style="color: #f16528;"></i></li>
+                        <li><span>CSS</span><i class="fab fa-css3-alt css" style="color: #2a65f1;"></i></li>
+                        <li><span>JavaScript</span><i class="fab fa-js js" style="color: #f7df1d;"></i></li>
+                        <li><span>Node.js</span><i class="fab fa-node node" style="color: #80bd00;"></i></li>
+                        <li><span>ReactJS</span><i class="fab fa-react react" style="color: #66d9f8;"></i></li>
+                        <li><span>React Native</span><i class="fab fa-react react-native" style="color: #5767fa"></i></li>
                     </ul>
                 </div>
-                <div class="hidden"></div>
             </div>
         </div>
 
-        <div class="projetos-page">
+        <div class="projetos-page" id="projetos">
             <h1 class="title-section">Projetos</h1>
 
             <ul class="lista-projetos">
@@ -68,7 +68,7 @@
                         <h2>Fashion</h2>
                         <p>HTML/CSS</p>
                     </div>
-                    <a href="./projetos-portfolio/fashion/index.html" target="_blank">Visualizar Projeto</a>
+                    <a href="./projetos-portfolio/fashion/index.html" target="_blank" class="visualizar-button">Visualizar Projeto</a>
                     <div class="hidden"></div>
                 </li>
 
@@ -80,9 +80,8 @@
                         <h2>Range Hotels</h2>
                         <p>HTML/CSS</p>
                     </div>
-                    <a href="./projetos-portfolio/range-hotels/index.html" target="_blank">Visualizar Projeto</a>
+                    <a href="./projetos-portfolio/range-hotels/index.html" target="_blank" class="visualizar-button">Visualizar Projeto</a>
                 </li>
-
                 <li class="card-projeto">
                     <div class="card-img">
                         <img src="./css/imgs/spotify.png" alt="">
@@ -91,7 +90,7 @@
                         <h2>Spotify</h2>
                         <p>HTML/CSS/Bootstrap</p>
                     </div>
-                    <a href="./projetos-portfolio/homepage-spotify/index.html" target="_blank">Visualizar Projeto</a>
+                    <a href="./projetos-portfolio/homepage-spotify/index.html" target="_blank" class="visualizar-button">Visualizar Projeto</a>
                 </li>
 
                 <li class="card-projeto">
@@ -102,9 +101,17 @@
                         <h2>Infusion</h2>
                         <p>HTML/CSS/JavaScript</p>
                     </div>
-                    <a href="./projetos-portfolio/infusion/index.html" target="_blank">Visualizar Projeto</a>
+                    <a href="./projetos-portfolio/infusion/index.html" target="_blank" class="visualizar-button">Visualizar Projeto</a>
                 </li>
             </ul>
+            <div class="devradar">
+                <div class="card-text">
+                    <h2>DevRadar</h2>
+                    <p>Node.js/ReactJS/React Native</p>
+                </div>
+                <img src="./css/imgs/devradar.png" alt="">
+                <a href="https://www.github.com/luanpanno/rocketseat-omnistack-10" target="_blank" class="visualizar-button">Visualizar Repositório</a>
+            </div>
             <div class="hidden"></div>
         </div>
     
@@ -112,18 +119,20 @@
             <div class="contato-content">
                 <div class="hidden"></div>
                 <div class="contato-text">
-                    <h1 class="title-section">Contato</h1>
+                    <h1 class="title-section" id="contato">Contato</h1>
                     <ul class="lista-contato">
-                        <li><a href="">Facebook</a></li>
-                        <li><a href="">Linkedin</a></li>
-                        <li><a href="">Whatsapp</a></li>
-                        <li><a href="">Github</a></li>
-                        <li><a href="">Email</a></li>
+                        <li><i class="fas fa-envelope" style="color: #00e69d; font-size: 16px;"></i> - luanpanno@gmail.com</li>
+                        <li><i class="fab fa-whatsapp" style="color: #00e69d; font-size: 16px;"></i> - (21) 971059193</li>
+                        <li><i class="fas fa-map-marker-alt" style="color: #00e69d; font-size: 16px;"></i> - Rio de Janeiro - RJ</li>
                     </ul>
-                    <div class="hidden"></div>
+                    <div class="contatos-link">
+                        <a href="https://www.facebook.com/luanpanno" target="_blank"><i class="fab fa-facebook-square" style="color: #4064ae;"></i></a>
+                        <a href="https://www.linkedin.com/in/luanpanno/" target="_blank"><i class="fab fa-linkedin" style="color: #0077b4;"></i></a>
+                        <a href="https://github.com/luanpanno" target="_blank"><i class="fab fa-github-square" style="color: #303030;"></i></a>
+                    </div>
                 </div>
                 <footer>
-                    <p>Desenvolvido por Luan Panno - <span class="ano-atual"></span></p>
+                    <p>Luan Panno - Todos os direitos reservados &copy; | <span class="ano-atual"></span></p>
                 </footer>
             </div>
         </div>
