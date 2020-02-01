@@ -5,61 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfólio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./icomoon/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="container">
         <header>
+            <p class="logo-header">Luan Panno</p>
             <nav class="nav">
-                <ul>
+                <ul class="lista-nav">
                     <!-- Mudar o bold conforme a seção -->
-                    <li><a href="">Início</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Projetos</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li class="item-nav"><a href="">Início</a></li>
+                    <li class="item-nav"><a href="">Sobre</a></li>
+                    <li class="item-nav"><a href="">Projetos</a></li>
+                    <li class="item-nav"><a href="">Contato</a></li>
                 </ul>
             </nav>
         </header>
 
-        <section class="inicio-section">
-            <!-- Adicionar animação depois -->
-            <p class="intro">Olá, meu nome é Luan <br> e eu sou Desenvolvedor Front-End.</p>
-            <div class="arrow-bottom"></div>
-            <button class="button-saber-mais">Saber mais</button>
-            <!-- <div class="arrow-bottom"></div> -->
-        </section>
-
-        <section class="sobre-section">
-            <h1 class="sobre-title">Sobre</h1>
-                <img src="https://avatars1.githubusercontent.com/u/35155386?s=460&v=4" alt="">
-                <p class="sobre-bio">Atualmente cursando Ciência da Computação na UniCarioca, sou apaixonado por desenvolvimento web. Comecei a programar no final de 2017, e comecei a desenvolver sites no meio de 2018. Nesse tempo, aprendi HTML, CSS, Design Responsivo, JavaScript, JQuery, ReactJS e Node.js</p>
-        </section>
-
-        <section class="projetos-section">
-            <h1 class="projetos-title">Projetos</h1>
-            <div class="projetos">
-                <ul>
-                    <li><img src="./imgs/fashion.png" alt=""> Fashion</li>
-                    <li><img src="./imgs/range-hotels.png" alt=""> Range Hotels</li>
-                    <li><img src="./imgs/spotify.png" alt=""></li>
-                    <li><img src="./imgs/infusion.png" alt=""> Infusion</li>
-                </ul>
+        <div class="first-page">
+            <div class="first-page-content">
+                <div class="text">
+                    <h1>Luan Panno</h1>
+                    <p class="typewritter">Desenvolvedor Front-End</p>
+                </div>
+                <div class="quadrado"></div>
+                <button class="saber-mais">Saber mais</button>
             </div>
-        </section>
+            <div class="hidden"></div>
+        </div>
 
-        <section class="contato-section">
-            <ul>
-                <li>Facebook</li>
-                <li>Linkedin</li>
-                <li>Gmail</li>
+        <div class="about-page">
+            <div class="about">
+                <div class="about-profile">
+                    <h1 class="title-section">Sobre</h1>
+                    <img src="./css/imgs/profile.jpg" alt="">
+                    <p>Meu nome é Luan Panno, eu sou desenvolvedor Front-End e faço Ciência da Computação na UniCarioca. Sou apaixonado por tecnologia e descobri na programação uma oportunidade para concretizar ideias, juntando o que eu mais gosto: tecnologia e design.</p>
+                </div>
+                <div class="habilidades">
+                    <h2>Habilidades</h2>
+                    <ul class="lista-habilidades">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Node.js</li>
+                        <li>ReactJS</li>
+                        <li>React Native</li>
+                    </ul>
+                </div>
+                <div class="hidden"></div>
+            </div>
+        </div>
+
+        <div class="projetos-page">
+            <h1 class="title-section">Projetos</h1>
+
+            <ul class="lista-projetos">
+                <li class="card-projeto">
+                    <div class="card-img">
+                        <img src="./css/imgs/fashion.png" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h2>Fashion</h2>
+                        <p>HTML/CSS</p>
+                    </div>
+                    <a href="./projetos-portfolio/fashion/index.html" target="_blank">Visualizar Projeto</a>
+                    <div class="hidden"></div>
+                </li>
+
+                <li class="card-projeto">
+                    <div class="card-img">
+                        <img src="./css/imgs/range-hotels.png" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h2>Range Hotels</h2>
+                        <p>HTML/CSS</p>
+                    </div>
+                    <a href="./projetos-portfolio/range-hotels/index.html" target="_blank">Visualizar Projeto</a>
+                </li>
+
+                <li class="card-projeto">
+                    <div class="card-img">
+                        <img src="./css/imgs/spotify.png" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h2>Spotify</h2>
+                        <p>HTML/CSS/Bootstrap</p>
+                    </div>
+                    <a href="./projetos-portfolio/homepage-spotify/index.html" target="_blank">Visualizar Projeto</a>
+                </li>
+
+                <li class="card-projeto">
+                    <div class="card-img">
+                        <img src="./css/imgs/infusion.png" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h2>Infusion</h2>
+                        <p>HTML/CSS/JavaScript</p>
+                    </div>
+                    <a href="./projetos-portfolio/infusion/index.html" target="_blank">Visualizar Projeto</a>
+                </li>
             </ul>
-        </section>
+            <div class="hidden"></div>
+        </div>
+    
+        <div class="contato-page">
+            <div class="contato-content">
+                <div class="hidden"></div>
+                <div class="contato-text">
+                    <h1 class="title-section">Contato</h1>
+                    <ul class="lista-contato">
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Linkedin</a></li>
+                        <li><a href="">Whatsapp</a></li>
+                        <li><a href="">Github</a></li>
+                        <li><a href="">Email</a></li>
+                    </ul>
+                    <div class="hidden"></div>
+                </div>
+                <footer>
+                    <p>Desenvolvido por Luan Panno - <span class="ano-atual"></span></p>
+                </footer>
+            </div>
+        </div>
 
-        <footer>
-            <p>Desenvolvido por Luan - <span class="ano-atual"></span></p>
-        </footer>
+
     </div>
-    <script src="./main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

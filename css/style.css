@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+/* main color: #00FFB0 #00E69D*/
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+body, input, button{
+    font-family: 'Roboto', sans-serif;
+}
+
+/*  */
+
+/* Nav */
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+    width: 100vw;
+}
+        
+header p{
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+}
+
+header .nav .lista-nav{
+    list-style: none;
+    display: flex;
+}
+
+header .nav .lista-nav li{
+    margin: 0 5px;
+}
+
+.lista-nav li a{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 2.5px 5px;
+    transition: border 100ms;
+    color: white;
+    transition: border 200ms;
+}
+
+.lista-nav li a:hover{
+    border-bottom: 1px solid white;
+}
+
+/*  */
+
+/* Capa */
+.first-page{
+    background-image: url(./imgs/background-responsive/1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    /* background-color: #00E69D; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.first-page-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-page .text{
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    text-shadow: 0.5px 1px 5px rgba(0, 0, 0, .5);
+    border-bottom: 20px solid #fff;
+    padding: 25px;
+    width: 30%;
+}
+
+.first-page .quadrado{
+    width: 25px;
+    height: 25px;
+    margin-top: -15px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+.first-page .typewritter{
+    position: relative;
+}
+
+.first-page .typewritter::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    width: 2px;
+    height: 90%;
+    border-right: 2.5px solid white;
+    animation: blink 1000ms infinite ease;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.saber-mais{
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+    border: 2px solid white;
+    margin-top: 25px;
+    padding: 5px;
+    font-size: 1em;
+    width: 15%;
+    border-radius: 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 200ms;
+}
+
+.saber-mais:hover{
+    background-color: rgba(0, 0, 0, .4);
+}
+
+/*  */
+
+/* About */
+.about-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    background-color: rgb(245, 245, 245);
+    padding: 25px;
+}
+
+.title-section{
+    border-bottom: 1px solid #00E69D;
+    font-size: 2.8em;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.about{
+    background-color: white;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, .4);
+}
+
+.about-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.about-profile h1{
+    margin-bottom: 15px;
+}
+
+.about-profile img{
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.about-profile p{
+    margin-top: 15px;
+    font-size: 1.3em;
+}
+
+.about .habilidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    height: 25%;
+}
+
+.habilidades h2{
+    font-weight: lighter;
+    border-bottom: 1px solid #00E69D;
+}
+
+.habilidades .lista-habilidades{
+    display: flex;
+    list-style: none;
+}
+
+.habilidades .lista-habilidades li{
+    margin: 0 15px;
+}
+
+/*  */
+
+/* Projetos */
+.projetos-page{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    background: white;
+}
+
+.projetos-page .lista-projetos{
+    height: 75%;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-projeto{
+    box-shadow: 0px 5px 10px 0.5px rgba(0, 0, 0, .2);
+    margin: 0 25px;
+    height: 400px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 10px;
+}
+
+.card-img{
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.card-img img{
+    height: 100%;
+    width: 175%;
+    outline: transparent;
+    transition: transform 200ms;
+}
+
+.card-img img:hover{
+    transform: scale(1.8);
+}
+
+.card-text{
+    margin-top: 10px;
+}
+
+.card-text h2{
+    font-weight: lighter;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.card-text p{
+    color: #00A671;
+    font-weight: lighter;
+}
+
+.card-projeto a{
+    text-decoration: none;
+    color: white;
+    background-color: #00E69D;
+    padding: 5px 15px;
+    border-radius: 25px;
+    transition: all 200ms;
+    border: 1px solid transparent;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.card-projeto a:hover{
+    background-color: white;
+    color: #00E69D;
+    border: 1px solid #00E69D;
+}
+
+
+/*  */
+
+/* Contato */
+.contato-page{
+    /* background-color: rgb(245, 245, 245); */
+    background-image: url(./imgs/background-responsive/wp2465916-javascript-wallpapers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.contato-content{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contato-text{
+    background-color: white;
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    height: 75%;
+}
+
+.contato-page ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.contato-page ul li{
+    list-style: none;
+    margin: 10px;
+}
+
+.contato-page ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+/*  */
+
+/* Footer */
+footer{
+    background-color: rgba(0, 0, 0, .4);
+    color: white;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    font-weight: lighter;
+}
