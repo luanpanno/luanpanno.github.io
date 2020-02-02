@@ -576,6 +576,9 @@ footer{
         margin: 0;
         font-size: 11px;
     }
+    .item-nav a{
+        padding: 0;
+    }
 
     .first-page-content{
         width: 80%;
@@ -589,6 +592,10 @@ footer{
 
     .lista-nav{
         font-size: 8px;
+    }
+
+    .first-page-content{
+        width: 100%;
     }
 }
 
