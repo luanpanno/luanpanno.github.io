@@ -558,32 +558,41 @@ footer{
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 565px){
     header{
-        height: 50px;
-        font-size: 10px;
+        height: 75px;
     }
 
     .onscroll{
-        height: 25px;
+        height: 50px;
     }
 
     .logo-header{
-        font-size: 12px;
+        font-size: 18px;
     }
 
     .lista-nav{
         padding: 0;
         margin: 0;
-        font-size: 8px;
+        font-size: 11px;
     }
 
     .first-page-content{
-        width: 100%;
+        width: 80%;
     }
 }
 
-@media screen and (max-height: 650px){
+@media screen and (max-width: 400px){
+    .logo-header{
+        font-size: 14px;
+    }
+
+    .lista-nav{
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-height: 700px){
     .first-page-content{
         height: 25%;
     }
