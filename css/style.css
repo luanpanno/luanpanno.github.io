@@ -31,15 +31,89 @@ body, input, button{
     scroll-behavior: smooth;
 }
 
-/* Nav */
+.fc-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-header{
-    position: fixed;
+.fc-around{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fc-evenly{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fr-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fr-around{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+/* function navStyle(height, textColor, bgColor, scrolled){
+    headerEl.style.height = height;
+    headerEl.style.backgroundColor = bgColor;
+    headerEl.style.transition = '400ms';
+    logoHeader.style.color = textColor;
+    linkItemNavEl.forEach(item => {
+        item.style.color = textColor;
+        item.style.border = 'none';
+    })
+    if(scrolled == true){
+        headerEl.style.boxShadow = '0px 1px 10px 0px rgba(0, 0, 0, .4)';
+        headerEl.style.zIndex = '2';
+    } else{
+        headerEl.style.boxShadow = 'none';
+    }
+} */
+
+/* Nav */
+
+.onscroll{
+    height: 80px;
+    background-color: white;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, .4);
+    z-index: 2;
+}
+
+.onscroll .logo-header a{
+    color: #00E69D;
+}
+
+.onscroll .item-nav{
+    border: none;
+}
+
+.onscroll .item-nav a{
+    color: #00E69D;
+}
+
+.onscroll .item-nav a:hover{
+    border-bottom: 1px solid #00E69D;
+}
+
+header{
+    position: fixed;
     height: 100px;
     width: 100vw;
+    transition: 400ms;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 header a{
@@ -87,29 +161,23 @@ header .nav .lista-nav li{
     background-repeat: no-repeat;
     background-position: center center;
     height: 100vh;
-    /* background-color: #00E69D; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    white-space: nowrap;
 }
 
 .first-page-content{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 35%;
+    margin-bottom: 2%;
+    margin-right: 2%;
 }
 
 .first-page .text{
     text-align: center;
     color: white;
-    font-size: 2em;
+    font-size: 30px;
     text-shadow: 0.5px 1px 5px rgba(0, 0, 0, .5);
     border-bottom: 20px solid #fff;
     padding: 25px;
-    width: 30%;
+    width: 100%;
 }
 
 .first-page .quadrado{
@@ -129,7 +197,7 @@ header .nav .lista-nav li{
     position: absolute;
     width: 2px;
     width: 2px;
-    height: 90%;
+    height: 100%;
     border-right: 2.5px solid white;
     animation: blink 1000ms infinite ease;
 }
@@ -153,7 +221,7 @@ header .nav .lista-nav li{
     margin-top: 25px;
     padding: 5px;
     font-size: 1em;
-    width: 15%;
+    width: 30%;
     border-radius: 25px;
     text-transform: uppercase;
     cursor: pointer;
@@ -175,29 +243,19 @@ header .nav .lista-nav li{
 
 /* About */
 .about-page{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 650px;
     background-color: rgb(245, 245, 245);
     padding: 25px;
 }
 
 .about{
-    background-color: white;   
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    background-color: white;
     width: 60%;
     height: 100%;
     box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, .4);
 }
 
 .about-profile{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 90%;
 }
 
@@ -215,13 +273,9 @@ header .nav .lista-nav li{
     font-size: 1.3em;
 }
 
-.about .habilidades{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+.habilidades{
     height: 25%;
-    min-width: 90%;
+    width: 90%;
     white-space: nowrap;
 }
 
@@ -230,22 +284,15 @@ header .nav .lista-nav li{
     border-bottom: 1px solid #00E69D;
 }
 
-.habilidades .lista-habilidades{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.lista-habilidades{
     list-style: none;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .habilidades .lista-habilidades li{
     margin: 0 25px;
     text-align: center;
-}
-
-.lista-habilidades li span{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .lista-habilidades li i{
@@ -257,22 +304,16 @@ header .nav .lista-nav li{
 
 /* Projetos */
 .projetos-page{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
     height: 1280px;
     background: white;
+    overflow: hidden;
 }
 
 .lista-projetos{
     margin: 25px 0;
     width: 100%;
     list-style: none;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 
 .card-projeto{
@@ -282,15 +323,14 @@ header .nav .lista-nav li{
     width: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
+    align-items: initial;
     padding: 10px;
 }
 
 .card-img{
     width: 100%;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
 }
 
 .card-img img{
@@ -337,10 +377,6 @@ header .nav .lista-nav li{
 }
 
 .projetos-page .devradar{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     box-shadow: 0px 5px 10px 0.5px rgba(0, 0, 0, .2);
     padding: 25px 50px;
@@ -355,7 +391,6 @@ header .nav .lista-nav li{
 
 /* Contato */
 .contato-page{
-    /* background-color: rgb(245, 245, 245); */
     background-image: url(./imgs/background-responsive/wp2465916-javascript-wallpapers.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -376,10 +411,6 @@ header .nav .lista-nav li{
 .contato-text{
     background-color: white;
     box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, .2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     width: 25%;
     height: 80%;
 }
@@ -416,10 +447,98 @@ footer{
     color: white;
     font-size: 1em;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 50px;
     width: 100%;
     font-weight: lighter;
+}
+
+@media screen and (max-width: 1614px){
+    .projetos-page{
+        justify-content: space-around;
+        padding: 25px;
+        height: 1500px;
+    }
+
+    .lista-projetos{
+        width: 75%;
+    }
+
+    .devradar{
+        width: 750px;
+    }
+
+    .devradar img{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    .first-page .text{
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .about{
+        width: 90%;
+    }
+
+    .lista-habilidades{
+        margin-top: 15px;
+    }
+
+    .contato-text{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1131px){
+    .saber-mais{
+        width: 100%;
+    }
+
+    .lista-projetos{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 864px){
+    .first-page .text{
+        font-size: 18px;
+    }
+
+    .projetos-page{
+        padding: 0;
+    }
+
+    .devradar{
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 814px){
+    .projetos-page{
+        height: 2250px;
+    }
+
+    .contato-text{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .first-page-content{
+        width: 50%;
+    }
+
+    .about-page{
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 575px){
+    header{
+        font-size: 12px;
+    }
 }

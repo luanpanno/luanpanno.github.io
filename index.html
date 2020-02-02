@@ -10,11 +10,10 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="noscroll">
             <p class="logo-header"><a href="">Luan Panno</a></p>
             <nav class="nav">
                 <ul class="lista-nav">
-                    <!-- Mudar o bold conforme a seção -->
                     <li class="item-nav"><a href="#inicio">Início</a></li>
                     <li class="item-nav"><a href="#sobre">Sobre</a></li>
                     <li class="item-nav"><a href="#projetos">Projetos</a></li>
@@ -23,8 +22,9 @@
             </nav>
         </header>
 
-        <div class="first-page" id="inicio">
-            <div class="first-page-content">
+        <div class="first-page fc-evenly" id="inicio">
+            <div class="hidden"></div>
+            <div class="first-page-content fc-center">
                 <div class="text">
                     <h1>Luan Panno</h1>
                     <p class="typewritter">Desenvolvedor Front-End</p>
@@ -33,33 +33,34 @@
                 <button class="saber-mais">Saber mais</button>
             </div>
             <div class="hidden"></div>
+            <div class="hidden"></div>
         </div>
 
-        <div class="about-page" id="sobre">
-            <div class="about">
-                <div class="about-profile">
+        <div class="about-page fr-center" id="sobre">
+            <div class="about fc-evenly">
+                <div class="about-profile fc-center">
                     <h1 class="title-section">Sobre</h1>
                     <img src="./css/imgs/profile.jpg" alt="">
                     <p>Meu nome é Luan Panno, eu sou desenvolvedor Front-End e faço Ciência da Computação na UniCarioca. Sou apaixonado por tecnologia e descobri na programação uma oportunidade para concretizar ideias, juntando o que eu mais gosto: tecnologia e design.</p>
                 </div>
-                <div class="habilidades">
+                <div class="habilidades fc-around">
                     <h2>Habilidades</h2>
-                    <ul class="lista-habilidades">
-                        <li><span>HTML</span><i class="fab fa-html5 html" style="color: #f16528;"></i></li>
-                        <li><span>CSS</span><i class="fab fa-css3-alt css" style="color: #2a65f1;"></i></li>
-                        <li><span>JavaScript</span><i class="fab fa-js js" style="color: #f7df1d;"></i></li>
-                        <li><span>Node.js</span><i class="fab fa-node node" style="color: #80bd00;"></i></li>
-                        <li><span>ReactJS</span><i class="fab fa-react react" style="color: #66d9f8;"></i></li>
-                        <li><span>React Native</span><i class="fab fa-react react-native" style="color: #5767fa"></i></li>
+                    <ul class="lista-habilidades fr-center">
+                        <li><span class="fr-center">HTML</span><i class="fab fa-html5 html" style="color: #f16528;"></i></li>
+                        <li><span class="fr-center">CSS</span><i class="fab fa-css3-alt css" style="color: #2a65f1;"></i></li>
+                        <li><span class="fr-center">JavaScript</span><i class="fab fa-js js" style="color: #f7df1d;"></i></li>
+                        <li><span class="fr-center">Node.js</span><i class="fab fa-node node" style="color: #80bd00;"></i></li>
+                        <li><span class="fr-center">ReactJS</span><i class="fab fa-react react" style="color: #66d9f8;"></i></li>
+                        <li><span class="fr-center">React Native</span><i class="fab fa-react react-native" style="color: #5767fa"></i></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="projetos-page" id="projetos">
+        <div class="projetos-page fc-evenly" id="projetos">
             <h1 class="title-section">Projetos</h1>
 
-            <ul class="lista-projetos">
+            <ul class="lista-projetos fr-center">
                 <li class="card-projeto">
                     <div class="card-img">
                         <img src="./css/imgs/fashion.png" alt="">
@@ -104,7 +105,7 @@
                     <a href="./projetos-portfolio/infusion/index.html" target="_blank" class="visualizar-button">Visualizar Projeto</a>
                 </li>
             </ul>
-            <div class="devradar">
+            <div class="devradar fc-center">
                 <div class="card-text">
                     <h2>DevRadar</h2>
                     <p>Node.js/ReactJS/React Native</p>
@@ -112,13 +113,12 @@
                 <img src="./css/imgs/devradar.png" alt="">
                 <a href="https://www.github.com/luanpanno/rocketseat-omnistack-10" target="_blank" class="visualizar-button">Visualizar Repositório</a>
             </div>
-            <div class="hidden"></div>
         </div>
     
         <div class="contato-page">
             <div class="contato-content">
                 <div class="hidden"></div>
-                <div class="contato-text">
+                <div class="contato-text fc-around">
                     <h1 class="title-section" id="contato">Contato</h1>
                     <ul class="lista-contato">
                         <li><i class="fas fa-envelope" style="color: #00e69d; font-size: 16px;"></i> - luanpanno@gmail.com</li>
@@ -131,7 +131,7 @@
                         <a href="https://github.com/luanpanno" target="_blank"><i class="fab fa-github-square" style="color: #303030;"></i></a>
                     </div>
                 </div>
-                <footer>
+                <footer class="fr-center">
                     <p>Luan Panno - Todos os direitos reservados &copy; | <span class="ano-atual"></span></p>
                 </footer>
             </div>
