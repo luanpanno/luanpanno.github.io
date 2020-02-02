@@ -228,6 +228,11 @@ header .nav .lista-nav li{
     transition: background 200ms;
 }
 
+.saber-mais a{
+    color: white;
+    text-decoration: none;
+}
+
 .saber-mais:hover{
     background-color: rgba(0, 0, 0, .4);
 }
@@ -540,5 +545,33 @@ footer{
 @media screen and (max-width: 575px){
     header{
         font-size: 12px;
+    }
+
+    .about-page{
+        padding: 15px 0;
+    }
+}
+
+@media screen and (max-height: 550px){
+    .first-page-content{
+        height: 25%;
+        width: 45%;
+    }
+
+    .first-page-content .text{
+        padding: 10px 0;
+        margin-bottom: 8px;
+        font-size: 14px;
+        width: 80%;
+        border-bottom: 10px solid white;
+    }
+
+    .first-page-content .quadrado{
+        display: none;
+    }
+
+    .first-page-content .saber-mais{
+        font-size: 10px;
+        width: 80%;
     }
 }
