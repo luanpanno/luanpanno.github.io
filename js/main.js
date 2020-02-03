@@ -1,21 +1,34 @@
-const anoAtual = document.querySelector('.ano-atual');
-const data = new Date();
-anoAtual.innerHTML = data.getFullYear();
-
-const headerEl = document.querySelector('header');
-const logoHeader = document.querySelector('.logo-header a')
-const itemNav = document.querySelectorAll('.item-nav');
-const linkItemNavEl = document.querySelectorAll('.item-nav a');
-
-const firstPageEl = document.querySelectorAll('.first-page');
-
+navSlide();
 typewritter();
 
 document.onscroll = () => {
     if(document.documentElement.scrollTop == 0){
-        headerEl.setAttribute('class', 'noscroll');
+        document.querySelector('nav').classList.remove('onscroll');
     } else{
-        headerEl.setAttribute('class', 'onscroll');
+        document.querySelector('nav').classList.add('onscroll');
+    }
+}
+
+function navSlide(){
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    burger.onclick = () => {
+        //toggle nav
+        nav.classList.toggle('nav-active');
+        
+        //animate links
+        navLinks.forEach((link, index) => {
+            if(link.style.animation){
+                link.style.animation = '';
+            } else{
+                link.style.animation = `navLinkFade 500ms ease forwards ${index / 5}s`;
+            }
+        });
+        
+        //burger animation
+        burger.classList.toggle('toggle');
     }
 }
 
@@ -25,20 +38,17 @@ function typewritter(){
     let index = 0;
     let currentText = '';
     let letter = '';
-
+    
     function type(){
         if(count === TextDecoderStream.length){
             count = 0;
         }
         currentText = texts[count];
         letter = currentText.slice(0, ++index);
-
+        
         document.querySelector('.typewritter').textContent = letter;
-        // if(letter.length == currentText.length){
-        //     count++;
-        //     index = 0;
-        // }
         setTimeout(type, 200);
     }
+    
     type();
 }
