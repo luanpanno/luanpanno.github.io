@@ -103,6 +103,7 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .capa-content .text{
@@ -124,7 +125,7 @@ nav{
     position: absolute;
     width: 2px;
     width: 2px;
-    height: 100%;
+    height: 30px;
     border-right: 2.5px solid white;
     animation: blink 1000ms infinite ease;
 }
@@ -479,7 +480,7 @@ nav{
     transform: rotate(45deg) translate(-5px,  -6px);
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 768px){
     .about-content{
         width: 75%;
     }
