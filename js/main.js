@@ -52,3 +52,6 @@ function typewritter(){
     
     type();
 }
+
+const date = new Date();
+document.querySelector('.ano-atual').innerHTML = date.getFullYear()
