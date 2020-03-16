@@ -269,7 +269,7 @@ nav{
     justify-content: center;
     align-items: initial;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .card-img{
@@ -330,13 +330,12 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
     padding: 10px;
     margin: 10px 0;
 }
 
 .devradar img{
-    width: 50%;
+    width: 100%;
     margin: 10px;
 }
 /*  */
@@ -514,7 +513,7 @@ nav{
     }
 
     .devradar{
-        width: 100%;
+        width: 350px;
     }
 
     .contato-text{
@@ -522,7 +521,7 @@ nav{
     }
 }
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 850px){
     .capa-content .text{
         width: 45%;
     }
@@ -531,12 +530,24 @@ nav{
         width: 50%;
     }
 
-    .projeto-cards{
-        width: 325px;
+    .projetos-content{
+        width: 100%;
     }
 
     .devradar{
-        width: 100%;
+        width: 95%;
+    }
+
+    .devradar img{
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 980px){
+
+    .projeto-cards{
+        width: 325px;
+        margin: 10px;
     }
 
     .contato-text{
@@ -559,11 +570,14 @@ nav{
         width: 100%;
     }
 
-    .proj.capa-content{
+    .projetos-lista{
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .capa-content{
         margin-bottom: 150px;
         margin-right: 25px;
-    }etos-lista{
-        justify-content: space-around;
     }
 
     .projeto-cards{
