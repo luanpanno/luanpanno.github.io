@@ -3,142 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/fontawesome-free-5.12.0-web/css/all.min.css">
+    <meta name="description" content="Portfolio mostrando o trabalho de desenvolvimento front-end de Luan Panno">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./imgs/icon.svg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/7bbddbf8c8.js" crossorigin="anonymous"></script>
+    <title>Luan | Front-End Developer</title>
 </head>
 <body>
-    <div class="container">
+    <header>
         <nav>
-            <div class="logo">
-                <a href="">Luan Panno</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="">Inicio</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
+            <span class="logo"><a href="">Luan Panno</a></span>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
             <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
             </div>
         </nav>
+    </header>
 
-        <section class="capa">
-            <div class="capa-content">
-                <div class="text">
-                    <h1>Luan Panno</h1>
-                    <p class="typewritter">Desenvolvedor Front-End</p>
-                </div>
-                <div class="quadrado"></div>
-                <a href="#sobre" class="saber-mais">Saber mais</a>
+    <main>
+        <section id="hero" name="hero" data-aos="fade-down" data-aos-duration="4000">
+            <div class="intro">
+                <h1>Luan Panno</h1>
+                <p class="typewritter">Desenvolvedor Front-End</p>
+                <a href="#about"><button class="btn">Saber mais</button></a>
             </div>
         </section>
 
-        <section class="about" id="sobre">
-            <div class="about-content">
-                <div class="profile">
-                    <h1 class="title-section">Sobre</h1>
-                    <img src="./css/imgs/profile.jpg" alt="">
-                    <p>Meu nome é Luan Panno, eu sou desenvolvedor Front-End e faço Ciência da Computação na UniCarioca. Sou apaixonado por tecnologia e descobri na programação uma oportunidade para concretizar ideias, juntando o que eu mais gosto: tecnologia e design.</p>
-                </div>
-                <div class="habilidades">
-                    <h2>Habilidades</h2>
-                    <ul class="lista-habilidades fr-center">
-                        <li><span class="fr-center">HTML</span><i class="fab fa-html5 html" style="color: #f16528;"></i></li>
-                        <li><span class="fr-center">CSS</span><i class="fab fa-css3-alt css" style="color: #2a65f1;"></i></li>
-                        <li><span class="fr-center">JavaScript</span><i class="fab fa-js js" style="color: #f7df1d;"></i></li>
-                        <li><span class="fr-center">Node.js</span><i class="fab fa-node node" style="color: #80bd00;"></i></li>
-                        <li><span class="fr-center">ReactJS</span><i class="fab fa-react react" style="color: #66d9f8;"></i></li>
-                        <li><span class="fr-center">React Native</span><i class="fab fa-react react-native" style="color: #5767fa"></i></li>
+        <section id="about" name="about" data-aos="fade-right" data-aos-duration="4000">
+            <div class="info">
+                <img src="./imgs/foto-perfil.jpg" alt="foto-luan">
+                
+                <div class="sobre">
+                    <div class="titulo">
+                        <h1 class="title">Sobre</h1>
+                        <div class="bar"></div>
+                    </div>
+                    <p>Me chamo Luan Panno, sou desenvolvedor Front-End e estudo Ciência da Computação no Centro Universitário Carioca. Sou apaixonado por tecnologia e descobri na programação uma oportunidade para concretizar ideias, juntando o que eu mais gosto: tecnologia e design. <br> Comecei a estudar programação em dezembro de 2017, e na metade de 2018 eu iniciei os estudos em Front-End, sempre buscando evolução constante, mantendo um trabalho consistente e com uma base de conhecimento sólida.</p>
+                    <div class="titulo">
+                        <h1 class="title">Skills</h1>
+                        <div class="bar"></div>
+                    </div>
+                    <ul class="skills">
+                        <li><span>HTML</span><i class="fab fa-html5 html" style="color: #f16528;"></i></li>
+                        <li><span>CSS</span><i class="fab fa-css3-alt css" style="color: #2a65f1;"></i></li>
+                        <li><span>JavaScript</span><i class="fab fa-js js" style="color: #f7df1d;"></i></li>
+                        <li><span>Node.js</span><i class="fab fa-node node" style="color: #80bd00;"></i></li>
+                        <li><span>ReactJS</span><i class="fab fa-react react" style="color: #66d9f8;"></i></li>
+                        <li><span>React Native</span><i class="fab fa-react react-native" style="color: #5767fa"></i></li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section class="projetos" id="projetos">
-            <h1 class="title-section">Projetos</h1>
-            <div class="projetos-content">
-                <ul class="projetos-lista">
-                    <li class="projeto-cards">
-                        <div class="card-img">
-                            <img src="./css/imgs/fashion.png" alt="">
+        <section id="projects" name="projects" data-aos="fade-right" data-aos-duration="4000">
+            <h1 class="title">Projetos</h1>
+            <div class="bar"></div>
+            <h2>Clique e visite algum de meus projetos!</h2>
+            <div class="cards">
+
+                <div class="card" data-aos="fade-right" data-aos-duration="4000" data-aos-delay="50">
+                    <a href="https://luanpanno-projetos.netlify.app/projetos/fashion/index.html" target="_blank">
+                        <div class="img">
+                            <img src="./imgs/projects/fashion.jpg" alt="">
                         </div>
-                        <div class="card-text">
-                            <h2>Fashion</h2>
-                            <p>HTML/CSS</p>
+                        <div class="info">
+                            <h3>Fashion</h3>
+                            <span>HTML, CSS</span>
+                            <button>Visualizar projeto</button>
                         </div>
-                        <a href="./projetos-portfolio/fashion/index.html" target="_blank" class="visualizar-button">Visualizar Projeto</a>
-                        <div class="hidden"></div>
-                    </li>
-    
-                    <li class="projeto-cards">
-                        <div class="card-img">
-                            <img src="./css/imgs/range-hotels.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="card" data-aos="fade-right" data-aos-duration="4000" data-aos-delay="50">
+                    <a href="https://luanpanno-projetos.netlify.app/projetos/range-hotels/index.html" target="_blank">
+                        <div class="img">
+                            <img src="./imgs/projects/range-hotels.png" alt="">
                         </div>
-                        <div class="card-text">
-                            <h2>Range Hotels</h2>
-                            <p>HTML/CSS</p>
+                        <div class="info">
+                            <h3>Range Hotels</h3>
+                            <span>HTML, CSS</span>
+                            <button>Visualizar projeto</button>
                         </div>
-                        <a href="./projetos-portfolio/range-hotels/index.html" target="_blank" class="visualizar-button">Visualizar Projeto</a>
-                    </li>
-                    <li class="projeto-cards">
-                        <div class="card-img">
-                            <img src="./css/imgs/spotify.png" alt="">
+                    </a>
+                </div>
+
+                <div class="card" data-aos="fade-right" data-aos-duration="4000" data-aos-delay="50">
+                    <a href="https://luanpanno-projetos.netlify.app/projetos/range-hotels/index.html" target="_blank">
+                        <div class="img">
+                            <img src="./imgs/projects/portfolio.jpg" alt="">
                         </div>
-                        <div class="card-text">
-                            <h2>Spotify</h2>
-                            <p>HTML/CSS/Bootstrap</p>
+                        <div class="info">
+                            <h3>Portfólio</h3>
+                            <span>HTML, CSS</span>
+                            <button>Visualizar projeto</button>
                         </div>
-                        <a href="./projetos-portfolio/homepage-spotify/index.html" target="_blank" class="visualizar-button">Visualizar Projeto</a>
-                    </li>
-    
-                    <li class="projeto-cards">
-                        <div class="card-img">
-                            <img src="./css/imgs/infusion.png" alt="">
+                    </a>
+                </div>
+
+                <div class="card" data-aos="fade-right" data-aos-duration="4000" data-aos-delay="50">
+                    <a href="https://luanpanno-projetos.netlify.app/projetos/elena-joy/index.html" target="_blank">
+                        <div class="img">
+                            <img src="./imgs/projects/elena-joy.png" alt="">
                         </div>
-                        <div class="card-text">
-                            <h2>Infusion</h2>
-                            <p>HTML/CSS/JavaScript</p>
+                        <div class="info">
+                            <h3>Elena Joy</h3>
+                            <span>HTML, CSS</span>
+                            <button>Visualizar projeto</button>
                         </div>
-                        <a href="./projetos-portfolio/infusion/index.html" target="_blank" class="visualizar-button">Visualizar Projeto</a>
-                    </li>
-                </ul>
-                <div class="devradar">
-                    <div class="card-text">
-                        <h2>DevRadar</h2>
-                        <p>Node.js/ReactJS/React Native</p>
-                    </div>
-                    <img src="./css/imgs/devradar.png" alt="">
-                    <a href="https://www.github.com/luanpanno/rocketseat-omnistack-10" target="_blank" class="visualizar-button">Visualizar Repositório</a>
+                    </a>
+                </div>
+                
+                <div class="card" data-aos="fade-right" data-aos-duration="4000" data-aos-delay="50">
+                    <a href="https://luanpanno-projetos.netlify.app/projetos/spotify/index.html" target="_blank">
+                        <div class="img">
+                            <img src="./imgs/projects/spotify.png" alt="">
+                        </div>
+                        <div class="info">
+                            <h3>Spotify</h3>
+                            <span>HTML, CSS, Bootstrap</span>
+                            <button>Visualizar projeto</button>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" data-aos="fade-right" data-aos-duration="4000" data-aos-delay="50">
+                    <a href="https://luanpanno-projetos.netlify.app/projetos/infusion/index.html" target="_blank">
+                        <div class="img">
+                            <img src="./imgs/projects/infusion.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <h3>Infusion</h3>
+                            <span>HTML, CSS, JavaScript</span>
+                            <button>Visualizar projeto</button>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" data-aos="fade-right" data-aos-duration="4000" data-aos-delay="50">
+                    <a href="https://github.com/luanpanno/rocketseat-omnistack-10" target="_blank">
+                        <div class="img">
+                            <img src="./imgs/projects/devradar.png" class="bigger" alt="">
+                        </div>
+                        <div class="info">
+                            <h3>Dev Radar</h3>
+                            <span>Node.js, ReactJS, React Native</span>
+                            <button>Visualizar projeto</button>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="contato" id="contato">
-            <div class="contato-content">
-                <div class="contato-text">
-                    <h1 class="title-section" id="contato">Contato</h1>
-                    <ul class="lista-contato">
-                        <li><i class="fas fa-envelope" style="color: #00e69d; font-size: 16px;"></i> - luanpanno@gmail.com</li>
-                        <li><i class="fab fa-whatsapp" style="color: #00e69d; font-size: 16px;"></i> - (21) 971059193</li>
-                        <li><i class="fas fa-map-marker-alt" style="color: #00e69d; font-size: 16px;"></i> - Rio de Janeiro - RJ</li>
-                    </ul>
-                    <div class="contatos-link">
-                        <a href="https://www.facebook.com/luanpanno" target="_blank"><i class="fab fa-facebook-square" style="color: #4064ae;"></i></a>
-                        <a href="https://www.linkedin.com/in/luanpanno/" target="_blank"><i class="fab fa-linkedin" style="color: #0077b4;"></i></a>
-                        <a href="https://github.com/luanpanno" target="_blank"><i class="fab fa-github-square" style="color: #303030;"></i></a>
-                    </div>
+        <section id="contact" name="contact" data-aos="fade-up" data-aos-duration="4000">
+            <h1 class="title">Contato</h1>
+            <div class="bar"></div>
+            <form action="https://formspree.io/mknqbgqy" method="POST" class="form-wrapper">
+                <h2>Fique à vontade para me mandar um email!</h2>
+                <div class="inputs">
+                    <input type="text" name="name" placeholder="Insira seu nome" required>
+                    <input type="email" name="_replyto" placeholder="Insira seu email" required>
+                    <textarea name="message" id="" placeholder="Mensagem" required></textarea>
                 </div>
-                <div class="copy">
-                    <p>Luan Panno - Todos os direitos reservados &copy; <span class="ano-atual"></span></p>
-                </div>
-            </div>
+                <button class="btn btn-submit" type="submit" value="Send">Enviar</button>
+              </form>
         </section>
-    </div>
-    <script src="./js/main.js"></script>
+
+    </main>
+
+    <footer>
+        <ul class="social">
+            <li><a href="https://www.facebook.com/luanpanno" target="_blank"><svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                <path d="M33.068 6.18528e-08H1.93035C0.864105 0.000534119 -0.000266967 0.86544 6.18528e-08 1.93195V33.0696C0.000534119 34.1359 0.86544 35.0003 1.93195 35H33.068C34.1348 35.0003 34.9997 34.1356 35 33.0688C35 33.0686 35 33.0683 35 33.068V1.93035C34.9995 0.864105 34.1346 -0.000266967 33.068 6.18528e-08Z" fill="white"/>
+                <path d="M24.165 35V21.4648H28.728L29.4116 16.167H24.165V12.7928C24.165 11.2625 24.5899 10.2197 26.7843 10.2197H29.5654V5.49411C29.0816 5.42976 27.4215 5.28583 25.4898 5.28583C21.4566 5.28583 18.6963 7.74676 18.6963 12.2681V16.167H14.1504V21.4648H18.6963V35H24.165Z" fill="#151925"/>
+                </g>
+                <defs>
+                <clipPath id="clip0">
+                <rect width="35" height="35" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+                </a></li>
+            <li><a href="https://www.linkedin.com/in/luanpanno" target="_blank"><svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31.834 0H3.16603C1.4175 0 0 1.4175 0 3.16603V31.8339C0 33.5825 1.4175 35 3.16603 35H31.8339C33.5825 35 35 33.5825 35 31.8339V3.16603C35 1.4175 33.5825 0 31.834 0ZM10.8305 30.2213C10.8305 30.7302 10.418 31.1427 9.90912 31.1427H5.98711C5.47823 31.1427 5.06575 30.7302 5.06575 30.2213V13.7804C5.06575 13.2715 5.47823 12.859 5.98711 12.859H9.90912C10.418 12.859 10.8305 13.2715 10.8305 13.7804V30.2213ZM7.94812 11.3092C5.89035 11.3092 4.22217 9.64103 4.22217 7.58327C4.22217 5.52551 5.89035 3.85733 7.94812 3.85733C10.0059 3.85733 11.6741 5.52551 11.6741 7.58327C11.6741 9.64103 10.006 11.3092 7.94812 11.3092ZM31.3268 30.2955C31.3268 30.7634 30.9475 31.1427 30.4797 31.1427H26.2711C25.8032 31.1427 25.4239 30.7634 25.4239 30.2955V22.5838C25.4239 21.4334 25.7614 17.5426 22.4175 17.5426C19.8237 17.5426 19.2976 20.2057 19.192 21.4009V30.2955C19.192 30.7634 18.8128 31.1427 18.3449 31.1427H14.2744C13.8066 31.1427 13.4273 30.7634 13.4273 30.2955V13.7062C13.4273 13.2383 13.8066 12.859 14.2744 12.859H18.3449C18.8127 12.859 19.192 13.2383 19.192 13.7062V15.1405C20.1538 13.6972 21.5831 12.5831 24.6263 12.5831C31.3654 12.5831 31.3268 18.8791 31.3268 22.3384V30.2955Z" fill="white"/>
+                </svg>
+                </a></li>
+            <li><a href="https://www.github.com/luanpanno" target="_blank"><svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                <rect width="35" height="35" rx="2.5" fill="white"/>
+                <ellipse cx="17.5" cy="19.8646" rx="16.7708" ry="16.4063" fill="#151925"/>
+                <path d="M17.5 2.72919C7.83125 2.72919 0 10.4292 0 19.9259C0 27.5252 5.01375 33.9696 11.9656 36.2417C12.8406 36.4036 13.1615 35.8713 13.1615 35.4148C13.1615 35.0065 13.1469 33.9244 13.1396 32.4909C8.27167 33.5277 7.245 30.1838 7.245 30.1838C6.44875 28.199 5.29812 27.6681 5.29812 27.6681C3.71292 26.6021 5.42063 26.624 5.42063 26.624C7.17792 26.7436 8.10104 28.3959 8.10104 28.3959C9.66146 31.0252 12.1975 30.2654 13.1979 29.8265C13.3554 28.7138 13.806 27.9569 14.3063 27.5267C10.4198 27.0965 6.335 25.6177 6.335 19.029C6.335 17.1521 7.01313 15.6179 8.13604 14.4148C7.93917 13.9802 7.34854 12.2317 8.28917 9.86335C8.28917 9.86335 9.75479 9.40252 13.1017 11.6265C14.5017 11.2444 15.9892 11.0548 17.4767 11.0461C18.9642 11.0548 20.4517 11.2444 21.8517 11.6265C25.1767 9.40252 26.6423 9.86335 26.6423 9.86335C27.5829 12.2317 26.9923 13.9802 26.8173 14.4148C27.9329 15.6179 28.611 17.1521 28.611 19.029C28.611 25.6352 24.5204 27.0892 20.6267 27.5121C21.2392 28.0284 21.8079 29.0827 21.8079 30.6942C21.8079 32.9954 21.786 34.8446 21.786 35.4031C21.786 35.8538 22.0923 36.3919 22.9892 36.2198C29.9906 33.9623 35 27.5136 35 19.9259C35 10.4292 27.1644 2.72919 17.5 2.72919Z" fill="white"/>
+                </g>
+                <defs>
+                <clipPath id="clip0">
+                <rect width="35" height="35" rx="2.5" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+                </a></li>
+        </ul>
+        <p>Site pessoal desenvolvido por Luan Panno - Todos os direitos reservados &copy; <span class="date"></span></p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

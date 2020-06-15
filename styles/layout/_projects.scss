@@ -1,0 +1,19 @@
+#projects{
+    background-color: rgb(250, 250, 250);
+    @include flex(column, center, center);
+    padding: 1rem;
+    
+    h2{
+        margin: 25px;
+        font-size: 1.2rem;
+        color: $gray;
+        text-align: center;
+    }
+
+    .cards{
+        width: 90%;
+        @include flex(row, center, center);
+        flex-wrap: wrap;
+        margin: auto;
+    }
+}

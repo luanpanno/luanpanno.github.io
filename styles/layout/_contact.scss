@@ -1,0 +1,8 @@
+#contact{
+    @include flex(column, space-around, center);
+    margin: 2rem 0;
+
+    .bar{
+        margin-bottom: 1rem;
+    }
+}

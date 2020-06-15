@@ -1,0 +1,41 @@
+header{
+    width: 100vw;
+    @include flex(row, flex-start, center);
+    position: fixed;
+    z-index: 3;
+    transition: all 200ms;
+}
+
+nav{
+    width: 90%;
+    margin: auto;
+    @include flex(row, center, center);
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 3rem;
+    transition: all 200ms;
+    
+    a{
+        
+        color: white;
+    }
+    
+    .logo{
+        flex: 3 1 20rem;
+        font-size: 2rem;
+    }
+    
+    ul{
+        @include flex(row, space-between, center);
+        flex: 1 1 20rem;
+        opacity: 1;
+        transition: all 200ms;
+        a{
+            padding: 1.2rem;
+            font-size: 1.2rem;
+            &:hover{
+                border-bottom: 1px solid white;
+            }
+        }
+    }
+}
