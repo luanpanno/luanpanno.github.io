@@ -518,7 +518,7 @@ footer p {
 .card .info span {
   color: #499ff2;
   font-weight: 600;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .card .info button {
@@ -527,7 +527,7 @@ footer p {
   padding: 0.5rem 1rem;
   color: white;
   border-radius: 50px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
   border: 1px solid transparent;
   -webkit-transition: all 200ms;
@@ -662,6 +662,7 @@ footer p {
 
 .scrollable {
   background-color: #499ff2;
+  height: 80px;
 }
 
 .scrollable nav {
@@ -724,14 +725,13 @@ footer p {
   }
   nav ul {
     position: absolute;
-    right: 0;
-    top: 10vh;
+    top: 80px;
     background-color: #499ff2;
     width: 100vw;
-    height: 65vh;
+    height: 50vh;
     display: none;
   }
-  .active {
+  .active ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -745,9 +745,16 @@ footer p {
         -ms-flex-align: center;
             align-items: center;
   }
-  .active .line1 {
-    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
-            transform: rotate(-45deg) translate(-5px, 6px);
+  .active .burger .line1 {
+    -webkit-transform: rotate(-45deg) translate(-3px, 5px);
+            transform: rotate(-45deg) translate(-3px, 5px);
+  }
+  .active .burger .line2 {
+    display: none;
+  }
+  .active .burger .line3 {
+    -webkit-transform: rotate(45deg) translate(0px, -3px);
+            transform: rotate(45deg) translate(0px, -3px);
   }
   #about .info {
     width: 100%;
@@ -842,6 +849,15 @@ footer p {
     font-size: 1rem;
     margin: 15px 5px;
     color: #414141;
+  }
+  .card .info h3 {
+    font-size: 1.6rem;
+  }
+  .card .info span {
+    font-size: 0.9rem;
+  }
+  .card .info button {
+    font-size: 0.8rem;
   }
   .form-wrapper {
     width: 95%;

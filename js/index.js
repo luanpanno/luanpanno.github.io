@@ -1,22 +1,32 @@
 (function(){
     const header = document.querySelector('header');
-    const navLinks = document.querySelector('nav ul');
+    const nav = document.querySelector('nav');
+    const navLink = document.querySelectorAll('nav li a');
     const burger = document.querySelector('.burger');
 
     const formInput = document.querySelector('form .inputs');
     const btnFormSubmit = document.querySelector('.btn-submit');
 
     AOS.init();
+    typewriter();
 
     // Script para manter o ano do footer sempre atualizado
     document.querySelector('.date').innerHTML = new Date().getFullYear();
 
-    burger.onclick = e => {
-        navLinks.classList.toggle('active');
+    navLink.forEach(link => {
+        link.onclick = e => {
+            if(nav.classList.contains('active')){
+                nav.classList.remove('active');
+            }
+        }
+    })
 
-        if(document.documentElement.scrollTop == 0 && !header.classList.contains('scrollable') && navLinks.classList.contains('active')){
+    burger.onclick = e => {
+        nav.classList.toggle('active');
+
+        if(document.documentElement.scrollTop == 0 && !header.classList.contains('scrollable') && nav.classList.contains('active')){
             header.classList.add('scrollable');
-        } else if(document.documentElement.scrollTop == 0 && header.classList.contains('scrollable') && !navLinks.classList.contains('active')){
+        } else if(document.documentElement.scrollTop == 0 && header.classList.contains('scrollable') && !nav.classList.contains('active')){
             header.classList.remove('scrollable');
         }
     }
@@ -25,7 +35,7 @@
         if(document.documentElement.scrollTop > 0){
             header.classList.add('scrollable');
         } else{
-            if(navLinks.classList.contains('active')){
+            if(nav.classList.contains('active')){
                 header.classList.add('scrollable');
             } else{
                 header.classList.remove('scrollable');
@@ -66,6 +76,4 @@
         
         type();
     }
-    
-    typewriter();
 })();

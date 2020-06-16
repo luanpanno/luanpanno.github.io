@@ -6,19 +6,31 @@
     nav{
         ul{
             position: absolute;
-            right: 0;
-            top: 10vh;
+            top: 80px;
             background-color: $blue1;
             width: 100vw;
-            height: 65vh;
+            height: 50vh;
             display: none;
         }
     }
     
     .active{
-        @include flex(column, space-around, center);
-        .line1{
-            transform: rotate(-45deg) translate(-5px,  6px);
+        ul{
+            @include flex(column, space-around, center);
+        }
+
+        .burger{
+            .line1{
+                transform: rotate(-45deg) translate(-3px,  5px);
+            }
+
+            .line2{
+                display: none;
+            }
+
+            .line3{
+                transform: rotate(45deg) translate(0px,  -3px);
+            }
         }
     }
 
@@ -99,6 +111,22 @@
                     margin: 15px 5px;
                     color: $gray;
                 }
+            }
+        }
+    }
+
+    .card{
+        .info{
+            h3{
+                font-size: 1.6rem;
+            }
+    
+            span{
+                font-size: 0.9rem;
+            }
+    
+            button{
+                font-size: 0.8rem;
             }
         }
     }
