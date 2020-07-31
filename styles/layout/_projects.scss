@@ -12,7 +12,7 @@
 
     .cards{
         width: 90%;
-        @include flex(row, center, center);
+        @include flex(row, flex-start, center);
         flex-wrap: wrap;
         margin: auto;
     }
